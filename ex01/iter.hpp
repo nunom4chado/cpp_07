@@ -4,7 +4,10 @@
 #include <iostream>
 
 template <typename T>
-void iter(T *arr, std::size_t size, void (*fn)(const T &)) {
+void iter(const T *arr, std::size_t size, void (*fn)(const T &)) {
+    if (arr == NULL || fn == NULL)
+        return;
+
     for (std::size_t i = 0; i < size; i++)
         fn(arr[i]);
 }
