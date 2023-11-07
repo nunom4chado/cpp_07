@@ -13,7 +13,7 @@ void iter(const T *arr, std::size_t size, void (*fn)(const T &)) {
 }
 
 template <typename T>
-void log(T &item) {
+void log(const T &item) {
     std::cout << item << std::endl;
 }
 
